@@ -1,6 +1,7 @@
 Team Members:
 Hayden Walpole; Undergraduate; Computer Engineering 
 Andy Tran; Undergraduate; Computer Engineering 
+Dinali Assylbek; Undergraduate; Computer Engineering
 
 Schematic Design Video: https://www.youtube.com/watch?v=nkHFoxe0mrU
 
