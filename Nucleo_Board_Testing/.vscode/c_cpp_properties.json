@@ -1,0 +1,36 @@
+{
+    "configurations": [
+        {
+            "name": "STM32WB",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/Core/Inc",
+                "${workspaceFolder}/Drivers/STM32WBxx_HAL_Driver/Inc",
+                "${workspaceFolder}/Drivers/STM32WBxx_HAL_Driver/Inc/Legacy",
+                "${workspaceFolder}/Drivers/BSP/P-NUCLEO-WB55.Nucleo",
+                "${workspaceFolder}/Drivers/CMSIS/Include",
+                "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32WBxx/Include",
+                "C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/arm-none-eabi/include",
+                "C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/lib/gcc/arm-none-eabi/13.3.1/include"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "USE_NUCLEO_64",
+                "USE_HAL_DRIVER",
+                "STM32WB55xx"
+            ],
+            "compilerPath": "C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc.exe",
+            "cStandard": "c11",
+            "intelliSenseMode": "gcc-arm",
+            "browse": {
+                "path": [
+                    "${workspaceFolder}/**"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            }
+        }
+    ],
+    "version": 4
+}

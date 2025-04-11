@@ -124,6 +124,9 @@ int main(void)
 	  // Testing toggling led using Board Support Package (BSP)
 	  BSP_LED_Toggle(LED_BLUE);
 	  HAL_Delay(500);
+
+
+	  HAL_GPIO_Toggle_Pin(PWR)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
