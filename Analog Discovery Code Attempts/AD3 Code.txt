@@ -1,0 +1,62 @@
+var address = 0x57;
+
+function initialize() {
+    // Ensure I2C bus is clear
+    print("starting");
+    // Verify device by checking Part ID (should be 0x15)
+    var partID = Read(address, [0xFF], 1);
+    if (!partID || partID[0] != 0x15) {
+        print(" MAX30102 not detected. Got:", partID);
+        return false;
+    }
+    print("MAX30102 detected (Part ID: 0x15)");
+
+    // Write configuration for heart rate mode
+    var config = [
+        [0x09, 0x02], // MODE_CONFIG: Heart Rate mode
+        [0x0A, 0x27], // SPO2_CONFIG: 100Hz, 411µs, 16-bit res
+        [0x0C, 0x24], // LED1_PA: Red LED ~36mA
+        [0x08, 0x4F], // FIFO_CONFIG: sample avg 4, FIFO rollover enabled
+        [0x04, 0x00], // FIFO_WR_PTR reset
+        [0x05, 0x00], // FIFO_OVF_CNT reset
+        [0x06, 0x00]  // FIFO_RD_PTR reset
+    ];
+
+    // Write the config to MAX30102
+    for (var i = 0; i < config.length; i++) {
+        var res = Write(address, [config[i][0], config[i][1]]);
+        if (res != 0) {
+            print("Write failed at register 0x" + config[i][0].toString(16));
+            return false;
+        }
+    }
+
+    print("MAX30102 initialized for Heart Rate mode.");
+    return true;
+}
+
+function loop() {
+    // Read 6 bytes from FIFO_DATA register (0x07)
+    var raw = Read(address, [0x07], 6);
+    if (!raw || raw.length != 6) {
+        print("Failed to read FIFO data.");
+        return true;
+    }
+
+    // Extract two 18-bit IR values (we're in HR mode, so only Red LED is used)
+    var ir1 = ((raw[0] << 16) | (raw[1] << 8) | raw[2]) & 0x3FFFF;
+    var ir2 = ((raw[3] << 16) | (raw[4] << 8) | raw[5]) & 0x3FFFF;
+
+    // Print values to console
+    print("IR Sample 1:", ir1, " | IR Sample 2:", ir2);
+
+    // Plot to WaveForms Custom logger
+   // CustomPlot(ir1);
+
+    return true;
+}
+
+function finish() {
+    print("Script finished.");
+    return "done";
+}

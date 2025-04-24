@@ -7,10 +7,11 @@ Stein Witt; Undergraduate; Mechanical Engineering
 -File Directory-
 CAD_FILES: file for the Platic Housing of our Watch Monitor
 Datasheetes: BOM and datasheets for the given componants
-HealthMonitor:
-Nucleo_Board_Testing
+HealthMonitor: Main Code file to be used to Flash the board with initialization and reading the sensor
+Nucleo_Board_Testing: Code used to Test Dev board and Flashing with our 6-pin SWD cable.
 PCB: PCB Scematic files and Board Design
 Photos: Pictures of the development and debugging process. Also contains helpful refrence photos
+Analog Discovery Code Attempts: Code we tried to use to communicate over I2C using Waveform with an analog discovery.
 
 Milestone 4 Powerpoint presentation: https://1drv.ms/p/c/c447666567076377/EbAtq3pLUSZKpYCg5cf9b-IBzeUnjeowH9_FPiCp1k7Zxw?e=1KSI1v
 
