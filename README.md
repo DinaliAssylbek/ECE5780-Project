@@ -4,13 +4,15 @@ Andy Tran; Undergraduate; Computer Engineering
 Dinali Assylbek; Undergraduate; Computer Engineering
 Stein Witt; Undergraduate; Mechanical Engineering
 
-Project Documentation Doc: https://docs.google.com/document/d/1FzdExbfpZ3WZORQFx473O3wBP4frnDB75tDe7cVKC2w/edit?usp=sharing
+-File Directory-
+CAD_FILES: file for the Platic Housing of our Watch Monitor
+Datasheetes: BOM and datasheets for the given componants
+HealthMonitor:
+Nucleo_Board_Testing
+PCB: PCB Scematic files and Board Design
+Photos: Pictures of the development and debugging process. Also contains helpful refrence photos
 
-Schematic Design Video: https://www.youtube.com/watch?v=nkHFoxe0mrU
-
-PBC Design Video: https://www.youtube.com/watch?v=PlXd3lLZ4vc&t=10184s
-
-Installing STMCUBE VSCode Extension: https://www.youtube.com/watch?v=aLD9zggmop4
+Milestone 4 Powerpoint presentation: https://1drv.ms/p/c/c447666567076377/EbAtq3pLUSZKpYCg5cf9b-IBzeUnjeowH9_FPiCp1k7Zxw?e=1KSI1v
 
 You need to install the following for the STM32 VSCode extension to work.
 
@@ -18,3 +20,8 @@ You need to install the following for the STM32 VSCode extension to work.
 -STMCubeMX
 -STMCLT
 -STMMCU
+
+
+Videos Used as Refrences:
+Schematic Design Video: https://www.youtube.com/watch?v=nkHFoxe0mrU
+PBC Design Video: https://www.youtube.com/watch?v=PlXd3lLZ4vc&t=10184s
